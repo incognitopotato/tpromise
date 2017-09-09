@@ -1,9 +1,9 @@
 // States as 'enum', used to determine the status of the tPromise
-const statuses = {
+const statuses = Object.freeze({
   RESOLVED: Symbol('resolved'),
   REJECTED: Symbol('rejected'),
   PENDING: Symbol('pending')
-}
+})
 
 // Implemented as constructor fn
 module.exports = function tPromise (fn) {
